@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<!--- Should check to make sure that at least one micropost exists otherwise this throws an error --->
+<p>
+  <strong>First Micropost:</strong>
+  <%= @user.microposts.first.content %>
+  <br />
+  <strong>Last Updated:</strong>
+  <%= @user.microposts.first.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
